@@ -1,6 +1,4 @@
 //{namespace name=backend/viison_scd_delivered_button_order_status_button}
-
-//{block name="backend/order/view/detail/overview" append}
 Ext.define('Shopware.apps.ViisonSCDDeliveredButtonOrderStatusButton.view.detail.Overview', {
 
     override: 'Shopware.apps.Order.view.detail.Overview',
@@ -44,4 +42,3 @@ Ext.define('Shopware.apps.ViisonSCDDeliveredButtonOrderStatusButton.view.detail.
     }
 
 });
-//{/block}

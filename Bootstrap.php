@@ -200,8 +200,8 @@ final class Shopware_Plugins_Backend_ViisonSCDDeliveredButton_Bootstrap extends 
 
         // Create all plugin subscribers
         $subscribers = [
-            new Subscribers\Backend\Order($this),
             new Subscribers\Controllers($this),
+            new Subscribers\SubApplicationRegistration($this),
             new ViisonCommonSubscribers\ViewLoading($this, 'ViisonSCDDeliveredButton')
         ];
 
