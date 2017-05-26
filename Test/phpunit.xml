@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="../vendor/viison/shopwaretestingcommon/bootstrap.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    verbose="true">
+    <php>
+        <!-- The environment shopware is configured to work in. When running unit
+             tests, this should be set to testing, which automatically changes
+             some configurations in shopware. Furthermore, a separate cache with
+             that prefix is created and, if available, the shopware configuration
+             file named "config_testing.php" is loaded instead of the default
+             "config.php". If you would like to load a different config file,
+             set "TEST_SHOPWARE_CONFIG".
+        -->
+        <env name="SHOPWARE_ENV" value="testing" />
+
+        <!-- The path to the test configuration file relative to the plugin's
+             test root folder. The configuration will be merged with the
+              default test configuration located inside the ShopwareTestingCommon
+              module. -->
+        <env name="TEST_CONFIG" value="config.json" />
+
+        <!-- Add the technical plugin name here. This is required for the class
+             loader to work correctly. -->
+        <env name="PLUGIN_NAME" value="ViisonSCDDeliveredButton"/>
+
+        <!-- The path to the plugin's test root folder (the folder where the
+             phpunit.xml file is located) will be detected automatically based on
+             the command line argument of the phpunit script, which specifies the
+             phpunit.xml file to be used. This dectection will only work in case
+             that the phpunit.xml file is referenced with its absolute path (which
+             is the case in our testrunner container). If this is not the case this
+             system environment variable can be used to set the absolute path to
+             the plugin's test root folder manually. -->
+        <!-- <env name="TEST_ROOT" value="" /> -->
+
+        <!-- This system environment variable can be used to set a custom
+             Shopware configuration for the test kernel. The custom configuration
+             will be merged with the default test configuration, which is located
+             inside the ShopwareTestingCommon module. The path to the custom
+             configuration file must be specified relative to the plugin's test
+             root folder. -->
+        <!-- <env name="TEST_SHOPWARE_CONFIG" value="" /> -->
+
+        <!-- In some environments it is not desirable to install and uninstall the
+             plugins required for testing (that is the plugins set in "config.json").
+             To disable the automatic plugin install/uninstall, set the following
+             variable to "true". -->
+        <!-- <env name="TESTING_COMMON_NO_PLUGIN_INSTALL" value="true" /> -->
+    </php>
+    <testsuites>
+        <testsuite>
+            <directory>.</directory>
+        </testsuite>
+    </testsuites>
+    <groups>
+        <include>
+            <!-- Integration tests are run inside a Shopware instance and are somewhat slow -->
+            <group>Integration</group>
+
+            <!-- Unit tests are fast and can be run without having to boot up Shopware first -->
+            <group>Unit</group>
+
+            <!-- Some tests communicate with external systems somewhere on the internet. These are mostly useful during
+                 development or when analyzing bugs. These tests should usually only be run manually, not on the CI -->
+            <group>RequiresExternalService</group>
+
+            <!-- Add your plugin-specific functional test groups here -->
+        </include>
+    </groups>
+</phpunit>

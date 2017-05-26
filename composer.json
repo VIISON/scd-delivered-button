@@ -12,6 +12,14 @@
         },
         {
             "type": "vcs",
+            "url": "git@github.com:VIISON/ShopwareOrderResource.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:VIISON/ShopwareTestingCommon.git"
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:VIISON/ShopwarePluginDependencyLoader.git"
         }
     ],
@@ -21,6 +29,9 @@
         "viison/scd-order-button": "^1",
         "Viison/ShopwareCommon": "^2",
         "viison/shopware-plugin-dependency-loader": "^2"
+    },
+    "require-dev": {
+        "Viison/ShopwareTestingCommon": "*"
     },
     "extra": {
         "installer-paths": {

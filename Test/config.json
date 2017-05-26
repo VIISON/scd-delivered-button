@@ -1,0 +1,13 @@
+{
+    "plugins": {
+        "Backend": {
+            "ViisonSCDDeliveredButton": {}
+        }
+    },
+    "serviceReplacements": {
+        "shopware.plugin.cached_config_reader": "VIISON\\ShopwareTestingCommon\\Mocks\\Components\\Plugin\\CachedConfigReader"
+    },
+    "database": {
+        "additionalCleanedTables": []
+    }
+}
