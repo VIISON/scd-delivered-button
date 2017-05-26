@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  shopware:
+    image: docker.viison.com/shopware/shopware:5.2
+
+  mysql:
+    image: docker.viison.com/lemp/mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+    volumes_from:
+      - shopware
+
+  unit:
+    build: .
+    links:
+      - shopware:shopware_host
+      - mysql:mysql_host
+    volumes_from:
+      - shopware
+    volumes:
+      - ..:/var/www/engine/Shopware/Plugins/Community/Backend/ViisonSCDDeliveredButton:ro
+    entrypoint: /test.sh
