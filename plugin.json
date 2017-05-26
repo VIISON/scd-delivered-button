@@ -1,0 +1,15 @@
+{
+    "currentVersion": "1.0.0",
+    "author": "VIISON GmbH",
+    "copyright": "Copyright © 2017 VIISON GmbH",
+    "license": "MIT",
+    "support": "support@pickware.de",
+    "link": "https://www.pickware.de/",
+    "label": {
+        "de": "SCD Delivered Button",
+        "en": "SCD Delivered Button"
+    },
+    "compatibility": {
+        "minimumVersion": "5.2.0"
+    }
+}

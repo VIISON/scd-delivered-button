@@ -1,0 +1,30 @@
+{
+    "name": "viison/scd-delivered-button",
+    "type": "shopware-backend-plugin",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:VIISON/scd-order-button.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:VIISON/ShopwareCommon.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:VIISON/ShopwarePluginDependencyLoader.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "composer/installers": "~1.0",
+        "Viison/ShopwareCommon": "^2",
+        "viison/shopware-plugin-dependency-loader": "^2"
+    },
+    "extra": {
+        "installer-paths": {
+            "./ViisonCommon/": ["Viison/ShopwareCommon"]
+        }
+    },
+    "minimum-stability": "stable"
+}
