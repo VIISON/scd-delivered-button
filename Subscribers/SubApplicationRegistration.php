@@ -14,7 +14,12 @@ class SubApplicationRegistration extends SubApplicationRegistrationSubscriber
     public function getSubApplications()
     {
         return [
-            'ViisonSCDDeliveredButtonOrderStatusButton' => 'Order'
+            'ViisonSCDDeliveredButtonOrderStatusButton' => [
+                'Order',
+                [
+                    'ViisonSCDOrderButtonUnicornButton'
+                ]
+            ]
         ];
     }
 }

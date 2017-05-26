@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fc18865a5266a5ee910dc7f12841ba7",
+    "content-hash": "02e511b3ddd469effc0dfab52b8e052d",
     "packages": [
         {
             "name": "Viison/ShopwareCommon",
@@ -284,6 +284,32 @@
             "description": "A library to read, parse and export to PDF SVG files.",
             "homepage": "https://github.com/PhenX/php-svg-lib",
             "time": "2015-05-06T18:49:49+00:00"
+        },
+        {
+            "name": "viison/scd-order-button",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VIISON/scd-order-button.git",
+                "reference": "b8cd71aa80d197d9cbf19770a0d0938492255ec1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/VIISON/scd-order-button/zipball/b8cd71aa80d197d9cbf19770a0d0938492255ec1",
+                "reference": "b8cd71aa80d197d9cbf19770a0d0938492255ec1",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.6.4",
+                "viison/shopwarecommon": "^2"
+            },
+            "type": "shopware-plugin",
+            "support": {
+                "source": "https://github.com/VIISON/scd-order-button/tree/1.0.0",
+                "issues": "https://github.com/VIISON/scd-order-button/issues"
+            },
+            "time": "2017-05-26T15:23:21+00:00"
         },
         {
             "name": "viison/shopware-plugin-dependency-loader",

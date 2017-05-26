@@ -18,12 +18,14 @@
     "require": {
         "php": ">=5.6.4",
         "composer/installers": "~1.0",
+        "viison/scd-order-button": "^1",
         "Viison/ShopwareCommon": "^2",
         "viison/shopware-plugin-dependency-loader": "^2"
     },
     "extra": {
         "installer-paths": {
-            "./ViisonCommon/": ["Viison/ShopwareCommon"]
+            "./ViisonCommon/": ["Viison/ShopwareCommon"],
+            "./ViisonSCDOrderButton/": ["viison/scd-order-button"]
         }
     },
     "minimum-stability": "stable"
